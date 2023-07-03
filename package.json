@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "yarn run start"
+    "start": "vite start"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.13",
