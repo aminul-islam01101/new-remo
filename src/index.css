@@ -1,0 +1,724 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* this is commit  update */
+
+@layer components {
+  /* .container {
+    @apply m-[0_auto] w-95 max-w-[1440px] px-0 sm: w-90 md:w-85 xl:w-3/4;
+  } */
+
+  .container-fluid {
+    @apply w-full px-0;
+  }
+
+  .button {
+    @apply px-7 py-3 bg-[#0B132A] text-white text-xs font-semibold rounded-md;
+  }
+
+  body {
+    @apply text-black bg-white;
+  }
+}
+
+html {
+  background-color: white !important;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0px;
+  box-sizing: border-box;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.overlay img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type='number'] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
+/* progress bar */
+.progress {
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  background: none;
+  margin: 0 auto;
+  box-shadow: none;
+  position: relative;
+}
+
+.progress:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 15px solid #f2f5f5;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.progress > span {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.progress .progress-left {
+  left: 0;
+}
+
+.progress .progress-bar {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 15px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+
+.progress .progress-left .progress-bar {
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+}
+
+.progress .progress-right {
+  right: 0;
+}
+
+.progress .progress-right .progress-bar {
+  left: -100%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  -webkit-transform-origin: center right;
+  transform-origin: center right;
+  animation: loading-1 1.8s linear forwards;
+}
+
+.progress .progress-value {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+}
+
+.progress.blue .progress-bar {
+  border-color: #26abfd;
+}
+
+.progress.blue .progress-left .progress-bar {
+  animation: loading-2 1.5s linear forwards 1.8s;
+}
+
+.progress.yellow .progress-bar {
+  border-color: #fdc426;
+}
+
+.progress.yellow .progress-left .progress-bar {
+  animation: loading-3 1s linear forwards 1.8s;
+}
+
+.progress.pink .progress-bar {
+  border-color: #f83754;
+}
+
+.progress.pink .progress-left .progress-bar {
+  animation: loading-4 0.4s linear forwards 1.8s;
+}
+
+.progress.green .progress-bar {
+  border-color: #1abc9c;
+}
+
+.progress.green .progress-left .progress-bar {
+  animation: loading-5 1.2s linear forwards 1.8s;
+}
+
+@keyframes loading-1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes loading-2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(144deg);
+    transform: rotate(144deg);
+  }
+}
+
+@keyframes loading-3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes loading-4 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(36deg);
+    transform: rotate(36deg);
+  }
+}
+
+@keyframes loading-5 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(126deg);
+    transform: rotate(126deg);
+  }
+}
+
+/* job post card box-shadow */
+
+.jobPostCard {
+  box-shadow: 0px 6px 24px rgba(77, 0, 180, 0.25);
+  border-radius: 10px;
+}
+
+.cardShadow {
+  box-shadow: 0px 6px 24px rgba(77, 0, 180, 0.25);
+  border-radius: 10px;
+}
+
+/* carousel arrows */
+.carousel .control-next.control-arrow:before {
+  border-left: 8px solid black !important;
+}
+
+.carousel .control-prev.control-arrow:before {
+  border-right: 8px solid black !important;
+}
+
+/* register number */
+.PhoneInputInput {
+  padding: 10px;
+  border: 0px !important;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffe3f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.input-field {
+  width: 330px;
+  height: 55px;
+  background-color: #fff;
+  border-radius: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  box-shadow: #fdd6f1 0px 5px 15px;
+}
+
+.input-field input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: hidden;
+  outline: none;
+  font-size: 18px;
+  text-indent: 2px;
+  padding: 5px;
+}
+
+.input-field span {
+  cursor: pointer;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* input file upload */
+.choose::-webkit-file-upload-button {
+  color: rgb(38, 37, 37);
+  display: inline-block;
+  background: #1cb6e0;
+  border: none;
+  padding: 7px 15px;
+  font-weight: 700;
+  border-radius: 3px;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 10pt;
+}
+
+/* post job review banner bg */
+.posReviewtBannerBg {
+  background-image: url('/src/Assets/Dashboard/post_job/BannerBg.png');
+  background-position: center;
+  height: 160px;
+  border-radius: 20px;
+  border: 1px solid #a5dbff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: max-content;
+}
+
+/*  banner Img */
+.internshipBannerImg,
+.private-review-img,
+.publicJobReview,
+.internship-review-banner,
+.post-gig-banner,
+.contract-banner {
+  background-image: url('/src/Assets/Dashboard/post_job/BannerBg.png');
+  background-position: center;
+  height: 160px;
+  border-radius: 20px;
+  border: 1px solid #a5dbff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: max-content;
+}
+.shadowing-banner {
+  background-image: url('/src/Assets/Dashboard/post_job/shadowingBanner.svg');
+  background-position: center;
+  height: 160px;
+  border-radius: 20px;
+  border: 1px solid #a5dbff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: max-content;
+}
+
+/* remoforce Dashboard Profile Bg */
+
+.remoforceDashboardProfileBg {
+  background-image: url('/src/Assets/RemoForceDashboard/RemoForceProfile/forceProfileBanner.png');
+  background-position: center;
+  height: 160px;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: -webkit-fill-available;
+}
+/* jobPostCard box-shadow*/
+
+.jobPostCardShaddow:hover {
+  box-shadow: 0px 6px 24px #4d00b440;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+/* remoforce user testimonial */
+.testimonialBg {
+  background-image: url('/src/Assets/UserComponentImages/Mask_group.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: full;
+}
+
+/* Startup Bg */
+
+@media screen and (max-width: 767px) {
+  .startupBg {
+    background-image: url('/src/Assets/Startup/StartUpHome/startupBg.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .posReviewtBannerBg {
+    height: 126px;
+    border-radius: 10px;
+    object-fit: contain;
+    width: 100%;
+  }
+
+  .testimonialBg {
+    background: transparent;
+  }
+
+  /*  banner img for mobile */
+  .internshipBannerImg,
+  .private-review-img,
+  .publicJobReview,
+  .internship-review-banner,
+  .post-gig-banner,
+  .contract-banner,
+  .shadowing-banner {
+    width: 95%;
+  }
+
+  .remoforceDashboardProfileBg {
+    object-fit: cover;
+    background-image: url('/src/Assets/RemoForceDashboard/RemoForceProfile/profileMobile.svg');
+    background-position: center;
+    right: 0px;
+  }
+
+  .remoforceBanner {
+    background-size: 100%;
+  }
+}
+
+.remoforceBanner {
+  background-image: url('./Assets/Images/RemoForceHome/remoBanner.png');
+  background-size: 55%;
+  background-repeat: no-repeat;
+}
+
+/* new added styles------------------- */
+
+/* remoforce recommended jobs */
+/* .recommendedBg {
+  background-image: url('./Assets/RemoForceDashboard/RemoForceAllJobs/recommendedJobBg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 110vh;
+
+} */
+
+/* recommended jobs */
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 15px !important;
+  border-radius: 50% !important;
+  background-color: white !important;
+  text-transform: none !important;
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: var(--swiper-navigation-sides-offset, 10px);
+  /* background: white !important; */
+  /* width: 34px !important;
+    height: 32px !important;
+    border-radius: 40px !important; */
+}
+
+/* remoforce shadowing */
+.benefitIcons {
+  /* Card Drop Shadow */
+  box-shadow: 0px 6px 24px rgba(77, 0, 180, 0.25);
+}
+
+.learningImgBg {
+  /* background-image: url('./Assets/UserComponentImages/learningImgBg.png'); */
+  background: rgba(0, 0, 0, 0.65)
+    url('http://fc02.deviantart.net/fs71/i/2011/274/6/f/ocean__sky__stars__and_you_by_muddymelly-d4bg1ub.png');
+  background-blend-mode: darken;
+}
+
+/* support modal background */
+.supportBg {
+  background-image: url('./Assets/UserComponentImages/userSupport.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* contact modal background */
+.contactModalBg {
+  background-image: url('./Assets/UserComponentImages/userContact.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* date picker */
+
+[type='text']:focus,
+[type='email']:focus,
+[type='url']:focus,
+[type='password']:focus,
+[type='number']:focus,
+[type='date']:focus,
+[type='datetime-local']:focus,
+[type='month']:focus,
+[type='search']:focus,
+[type='tel']:focus,
+[type='time']:focus,
+[type='week']:focus,
+[multiple]:focus,
+textarea:focus,
+select:focus {
+  outline: 0px solid transparent;
+  outline-offset: 0px;
+  --tw-ring-inset: var(--tw-empty, /*!*/ /*!*/);
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: #2563eb;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width)
+    var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width))
+    var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  border-color: transparent !important;
+}
+
+/* talent request  */
+.talentRequestBanner {
+  background-image: url(./Assets/Dashboard/talentRequest/bannerPhoto.svg);
+  background-size: auto;
+  background-position: top;
+}
+
+/* talent request */
+.select2-selection__input {
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+}
+.select2-selection__input:focus {
+  box-shadow: none !important;
+  outline: none;
+}
+
+select:focus {
+  outline: none;
+}
+
+/* talent range */
+
+.range-input-container {
+  position: relative;
+  width: 300px;
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background-color: #13d1ff;
+  outline: none;
+  margin: 0;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  box-shadow: 2px 2px 10px 5px #ddddf6;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.range-input-indicators {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.range-input-indicator {
+  position: absolute;
+  top: 0;
+  width: 7px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: #13d1ff;
+  z-index: -1;
+}
+
+.range-input-indicator-0 {
+  left: 0;
+}
+.defaultMark {
+  position: absolute;
+  top: 50px;
+}
+
+.range-input-indicator-25 {
+  left: 25%;
+}
+
+.range-input-indicator-50 {
+  left: 49%;
+}
+
+.range-input-indicator-75 {
+  left: 73.5%;
+}
+
+.range-input-indicator-100 {
+  right: 0;
+}
+
+/* talent table */
+.progress-ring {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+.progress-ring__circle {
+  fill: none;
+  stroke: #ddd;
+  stroke-width: 8;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+}
+
+.progress-ring__circle--progress {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: progress-ring 1s ease-out forwards;
+}
+
+@keyframes progress-ring {
+  from {
+    stroke-dashoffset: 300;
+  }
+  to {
+    stroke-dashoffset: calc(300 - (300 * var(--value)) / 100);
+  }
+}
+
+.talentTable {
+  box-shadow: #edf4fd 0px 0px 16px;
+}
+.designationCard {
+  box-shadow: #dfcdf8 0px 0px 20px;
+}
+
+/* startup landing */
+.getDmeShadowCard {
+  box-shadow: 0px 4px 15px 4px #f7e9cc;
+}
+.getDmeShadow {
+  box-shadow: 0px 6px 15px 2px #ffe0b1;
+}
+
+.shadow-custom {
+  box-shadow: rgba(160, 32, 240, 0.24) 0px 3px 18px;
+}
+
+/* startup my tools */
+.startUpMyToolsInterview {
+  background-image: url('./Assets/Dashboard/talentRequest/my-tools/interview_assis.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.startUpMyToolsDei {
+  background-image: url('./Assets/Dashboard/talentRequest/my-tools/DEI.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.startUpMyToolsResume {
+  background-image: url('./Assets/Dashboard/talentRequest/my-tools/resume.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+@media screen and (min-width: 768px) {
+  .remoforce-verify-banner {
+    background-image: url('../src//Assets//RemoForceDashboard//verify//path.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .remoforce-verify-container {
+    display: none;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .remoforce-verify-badge-for-mobile {
+    display: none;
+  }
+}

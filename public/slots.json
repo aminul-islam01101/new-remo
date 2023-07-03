@@ -1,0 +1,22 @@
+{
+  "slots": [
+    { "slot": "09:00AM-10:00AM" },
+    { "slot": "10:00AM-11:00AM" },
+    { "slot": "11:00AM-12:00PM" },
+    { "slot": "12:00PM-01:00PM" },
+    { "slot": "01:00PM-02:00PM" },
+    { "slot": "02:00PM-03:00PM" },
+    { "slot": "03:00PM-04:00PM" },
+    { "slot": "04:00PM-05:00PM" }
+  ],
+  "timeSlots": [
+    { "label": "09:00AM-10:00AM", "value": "09:00AM-10:00AM" },
+    { "label": "10:00AM-11:00AM", "value": "10:00AM-11:00AM" },
+    { "label": "11:00AM-12:00PM", "value": "11:00AM-12:00PM" },
+    { "label": "12:00PM-01:00PM", "value": "12:00PM-01:00PM" },
+    { "label": "01:00PM-02:00PM", "value": "01:00PM-02:00PM" },
+    { "label": "02:00PM-03:00PM", "value": "02:00PM-03:00PM" },
+    { "label": "03:00PM-04:00PM", "value": "03:00PM-04:00PM" },
+    { "label": "04:00PM-05:00PM", "value": "04:00PM-05:00PM" }
+  ]
+}
